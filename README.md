@@ -28,7 +28,7 @@ Make sure you have the following installed on your system:
 Clone this project to your local machine using:
 
 ```
-git clone https://github.com/dgostin/recipes-backend.git
+git clone https://github.com/dgostin/recipes-backend.git recipe-search-api
 ```
 
 ### 2. Navigate to the Project Directory
