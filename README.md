@@ -1,7 +1,3 @@
-Here's a sample README for your Node.js backend API project that uses the Edamam Recipe API to fetch recipe data. It provides an overview, setup instructions, and basic usage.
-
----
-
 # Recipe Search API
 
 This is a Node.js backend API that fetches recipe data from the Edamam Recipe API. The API allows users to search for recipes based on various parameters such as ingredients, diet preferences, and more.
