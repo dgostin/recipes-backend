@@ -5,8 +5,8 @@ This is a Node.js backend API that fetches recipe data from the Edamam Recipe AP
 ## Features
 
 - Fetch recipes based on search query
-- Filter recipes by ingredients, diet preferences, and other parameters
-- Paginated results (fetch 20 recipes at a time)
+- Filter recipes by Cuisine type and Meal type
+- Paginated results
 
 ## Tech Stack
 
