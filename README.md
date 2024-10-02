@@ -104,20 +104,6 @@ The API returns a JSON object with recipe details such as title, ingredients, ca
 }
 ```
 
-## Project Structure
-
-```
-/recipe-search-api
-  ├── /node_modules
-  ├── /src
-      ├── /routes
-      └── /controllers
-  ├── .gitignore
-  ├── .env
-  ├── package.json
-  └── README.md
-```
-
 ## Dependencies
 
 - `express` - Web framework for Node.js
