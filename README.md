@@ -90,18 +90,25 @@ GET /api/recipes?from=0&to=6&term=chicken&selectedCuisineTypes=Caribbean&selecte
 
 ### Response:
 
-The API returns a JSON object with recipe details such as title, ingredients, calories, and more.
+The API returns a JSON object with a count of results and an array of "recipe" objects.
 
 ```json
 {
-  "recipes": [
+  "q": "chicken",
+  "from": 0,
+  "to": 3,
+  "more": true,
+  "count": 9795,
+  "hits": [
     {
-      "title": "Grilled Chicken",
-      "ingredients": ["chicken", "olive oil", "garlic"],
-      "calories": 250,
-      "image": "image_url"
+      "recipe": {}
     },
-    ...
+    {
+      "recipe": {}
+    },
+    {
+      "recipe": {}
+    }
   ]
 }
 ```
