@@ -85,7 +85,7 @@ GET /api/recipes
 #### Example Request:
 
 ```
-GET /api/recipes?q=chicken&diet=low-carb
+GET /api/recipes?from=0&to=6&term=chicken&selectedCuisineTypes=Caribbean&selectedCuisineTypes=Chinese&selectedMealTypes=Snack&selectedMealTypes=Lunch
 ```
 
 ### Response:

@@ -10,6 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/recipes", async (req, res) => {
+  console.log(req.query);
+
   const params = {
     // type: "public",
     from: req.query.from ?? 0,
