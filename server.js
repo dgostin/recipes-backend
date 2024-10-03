@@ -9,51 +9,27 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Edamam API route
 app.get("/api/recipes", async (req, res) => {
-  const q = req.query.q || ""; // Search query from the frontend
-
-  const params = {
-    q,
-    app_id: process.env.EDAMAM_APP_ID,
-    app_key: process.env.EDAMAM_APP_KEY,
-  };
-
-  if (req.query.cuisineType) {
-    params.cuisineType = req.query.cuisineType;
-  }
-
-  const queryParams = new URLSearchParams(params);
-  console.log(queryParams.toString());
-  const url = `https://api.edamam.com/search?${queryParams}`;
-
-  try {
-    const response = await axios.get(url);
-    res.json(response.data);
-  } catch (error) {
-    res.status(500).json({ message: "Error fetching recipes" });
-  }
-});
-
-app.post("/api/recipes", async (req, res) => {
-  //   res.json(req.body);
-
   const params = {
     // type: "public",
-    from: req.body.from ?? 0,
-    to: req.body.to ?? 10,
-    q: req.body.term,
-    cuisineType: req.body.selectedCuisineTypes,
-    mealType: req.body.selectedMealTypes,
+    from: req.query.from ?? 0,
+    to: req.query.to ?? 10,
+    q: req.query.term,
+    ...(req.query.selectedCuisineTypes && {
+      cuisineType: req.query.selectedCuisineTypes,
+    }),
+    ...(req.query.selectedMealTypes && {
+      mealType: req.query.selectedMealTypes,
+    }),
     app_id: process.env.EDAMAM_APP_ID,
     app_key: process.env.EDAMAM_APP_KEY,
   };
 
-  console.log(params);
+  // console.log(params);
   const queryParams = objectToParams(params);
-  const url = `https://api.edamam.com/search?${queryParams}`;
+  const url = `https://api.edamam.com/search?${queryParams}`; // Old API version allows "from" and "to" params
   //   const url = `https://api.edamam.com/api/recipes/v2?${queryParams}`;
-  console.log(url);
+  // console.log(url);
 
   try {
     const response = await axios.get(url);

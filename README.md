@@ -76,9 +76,11 @@ GET /api/recipes
 
 #### Query Parameters:
 
-- `q` - The search term (e.g., `chicken`, `pasta`, etc.)
-- `diet` - Diet preferences (e.g., `low-carb`, `high-protein`)
-- `health` - Health filters (e.g., `gluten-free`, `vegan`)
+- `from` - First result index (default 0)
+- `to` - Last result index
+- `term` - The search term (e.g., `chicken`, `pasta`, etc.)
+- `selectedCuisineTypes` - The type of cuisine of the recipe. You can simultatniousely use saveral cuisines this way “cuisineType=chinese&cuisineType=indian”
+- `selectedMealTypes` - The type of meal a recipe belongs to – lunch, dinner, breakfast, snack
 
 #### Example Request:
 
