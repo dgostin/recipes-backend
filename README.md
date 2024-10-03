@@ -12,7 +12,7 @@ This is a Node.js backend API that fetches recipe data from the Edamam Recipe AP
 
 - Node.js
 - Express.js
-- Edamam Recipe API
+- Edamam Recipe API (Uses v1 of the API https://developer.edamam.com/edamam-docs-recipe-api-v1)
 
 ## Prerequisites
 

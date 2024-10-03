@@ -13,7 +13,6 @@ app.get("/api/recipes", async (req, res) => {
   console.log(req.query);
 
   const params = {
-    // type: "public",
     from: req.query.from ?? 0,
     to: req.query.to ?? 10,
     q: req.query.term,
