@@ -26,7 +26,7 @@ app.get("/api/recipes", async (req, res) => {
     app_key: process.env.EDAMAM_APP_KEY,
   };
 
-  console.log(params);
+  // console.log(params);
 
   const queryParams = objectToParams(params);
   const url = `https://api.edamam.com/search?${queryParams}`; // Old API version allows "from" and "to" params
