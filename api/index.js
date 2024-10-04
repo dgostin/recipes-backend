@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/api/recipes", async (req, res) => {
-  console.log(req.query);
+  // console.log(req.query);
 
   const params = {
     from: req.query.from ?? 0,
@@ -26,7 +26,7 @@ app.get("/api/recipes", async (req, res) => {
     app_key: process.env.EDAMAM_APP_KEY,
   };
 
-  // console.log(params);
+  console.log(params);
   const queryParams = objectToParams(params);
   const url = `https://api.edamam.com/search?${queryParams}`; // Old API version allows "from" and "to" params
   //   const url = `https://api.edamam.com/api/recipes/v2?${queryParams}`;
@@ -59,3 +59,5 @@ function objectToParams(obj) {
 
   return params.toString();
 }
+
+module.exports = app;

@@ -54,3 +54,4 @@ typings/
 
 # VsCode REST Client requests
 requests.http
+.vercel
