@@ -27,6 +27,7 @@ app.get("/api/recipes", async (req, res) => {
   };
 
   console.log(params);
+
   const queryParams = objectToParams(params);
   const url = `https://api.edamam.com/search?${queryParams}`; // Old API version allows "from" and "to" params
   //   const url = `https://api.edamam.com/api/recipes/v2?${queryParams}`;
